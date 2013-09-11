@@ -1,0 +1,26 @@
+
+.btn.social-course
+{
+    color: blue;
+    cursor: pointer;
+    position: relative;
+    left: 100px;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.label.forward-done
+{
+    background: #FFFFCC;
+    border-radius: 5px;
+    color: black;
+    margin: 5px;
+    position: relative;
+    left: 100px;
+}
+
+.label.forward-done > a
+{
+    color:blue;
+    text-decoration: underline;
+}
