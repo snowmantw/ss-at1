@@ -1,0 +1,18 @@
+language: python
+python:
+    - "2.7"
+before_install:
+    - sudo apt-get update
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+install:
+    - sudo apt-get install firefox
+    - sudo apt-get install libxss1
+    - pip install selenium
+    - pip install -r requirements.txt --use-mirrors
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_`uname -i`.deb
+    - sudo dpkg -i google-chrome*.deb
+script: 
+    - echo 'hello world'
+    
+
