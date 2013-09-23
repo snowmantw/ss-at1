@@ -22,4 +22,5 @@ install:
     - cd ..
     - cd ss-at1-uitest
 script: 
+    - tree
     - python tests/basic_flows.py
