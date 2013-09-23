@@ -19,8 +19,7 @@ install:
     - python -m SimpleHTTPServer 5000 &
     - sudo cp at1.json /etc/opt/chrome/policies/managed/
     - sudo cp at1.json /etc/chromium/policies/managed/
-    - cd ..
-    - cd ss-at1-uitest
+    - cd ../ss-at1-uitest
 script: 
     - tree
     - python tests/basic_flows.py
