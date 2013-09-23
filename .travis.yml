@@ -8,14 +8,16 @@ before_install:
 install:
     - cp -r . /tmp/test
     - sudo apt-get install libxss1
+    - sudo apt-get install tree
+    - tree
     - sudo pip install selenium
     - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - sudo dpkg -i google-chrome*.deb
     - sudo mkdir -p /etc/opt/chrome/policies/managed/ /etc/chromium/policies/managed/
     - cd test && ./crxmake.sh /tmp/test ./privkey.pem
-    - cd test && python -m SimpleHTTPServer 5000 &
-    - sudo cp test/at1.json /etc/opt/chrome/policies/managed/
-    - sudo cp test/at1.json /etc/chromium/policies/managed/
+    - python -m SimpleHTTPServer 5000 &
+    - sudo cp at1.json /etc/opt/chrome/policies/managed/
+    - sudo cp at1.json /etc/chromium/policies/managed/
 script: 
     - git clone git@github.com:snowmantw/ss-at1-uitest.git    
     - python ss-at1-uitest/tests/basic_flows.py
