@@ -12,10 +12,11 @@ install:
     - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - sudo dpkg -i google-chrome*.deb
     - sudo mkdir -p /etc/opt/chrome/policies/managed/ /etc/chromium/policies/managed/
-    
-      
-      
+    - cd test && ./crxmake.sh /tmp/test ./privkey.pem
+    - cd test && python -m SimpleHTTPServer 5000 &
+    - cp test/at1.json /etc/opt/chrome/policies/managed/
+    - cp test/at1.json /etc/chromium/policies/managed/
 script: 
-    - echo 'hello world'
+    - google-chrome --enable-easy-off-store-extension-install
     
 
