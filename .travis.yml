@@ -20,6 +20,6 @@ install:
     - sudo cp at1.json /etc/opt/chrome/policies/managed/
     - sudo cp at1.json /etc/chromium/policies/managed/
     - cd ..
-script: 
     - cd ss-at1-uitest
+script: 
     - python tests/basic_flows.py
