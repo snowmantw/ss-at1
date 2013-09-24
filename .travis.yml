@@ -23,4 +23,5 @@ install:
 script: 
     - tree
     - chmod a+x tools/chromedriver
+    - python -c "import sys, pprint; pprint.pprint(sys.path)"
     - python tests/basic_flows.py
