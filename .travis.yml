@@ -21,4 +21,5 @@ install:
     - cd ../ss-at1-uitest
 script: 
     - google-chrome --version
+    - type -a google-chrome
     - python tests/basic_flows.py
