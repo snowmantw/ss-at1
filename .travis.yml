@@ -20,4 +20,5 @@ install:
     - sudo cp at1.json /etc/chromium/policies/managed/
     - cd ../ss-at1-uitest
 script: 
+    - google-chrome --version
     - python tests/basic_flows.py
