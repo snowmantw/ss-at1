@@ -22,4 +22,5 @@ install:
     - cd ../ss-at1-uitest
 script: 
     - tree
+    - chmod a+x tools/chromedriver
     - python tests/basic_flows.py
