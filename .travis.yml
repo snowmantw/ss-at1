@@ -9,7 +9,6 @@ install:
     - cp -r . /tmp/test
     - sudo apt-get install libxss1
     - sudo apt-get install tree
-    - tree
     - pip install selenium
     - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - sudo dpkg -i google-chrome*.deb
@@ -21,7 +20,4 @@ install:
     - sudo cp at1.json /etc/chromium/policies/managed/
     - cd ../ss-at1-uitest
 script: 
-    - tree
-    - chmod a+x tools/chromedriver
-    - python -c "import sys, pprint; pprint.pprint(sys.path)"
     - python tests/basic_flows.py
