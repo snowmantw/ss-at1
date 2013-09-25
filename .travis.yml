@@ -21,5 +21,4 @@ install:
     - sudo cp at1.json /etc/chromium/policies/managed/
     - cd ../ss-at1-uitest
 script: 
-    - print 'hello'
     - python tests/basic_flows.py
